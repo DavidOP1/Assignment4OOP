@@ -45,3 +45,9 @@ UML:
 --
 ![WhatsApp Image 2022-01-08 at 21 50 51](https://user-images.githubusercontent.com/54214707/148657977-b19caf6c-2caf-41b1-8415-7e74db39e34a.jpeg)
 
+About the GUI:
+--
+we implemented the option to see the Algorithm in front of your eyes, when you run Ex4 the GUI will be opened.
+of course we implemented that so the current grade, moves and time left-to-end will be presented as well as a stop button which will stop the game gracefully.
+we also made 2 different pokemons - one who lying on downward edges and the other who lying on upward edges
+
