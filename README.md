@@ -3,7 +3,7 @@ Name: David Ehevich , ID:  212757405
 
 Name: Liel Zilberman , ID: 212480974
 
-Name: Israel Yaacobovich ,  ID: 
+Name: Israel Yaacobovich ,  ID: 212403679
 
 Must Read!!:
 --
@@ -25,6 +25,10 @@ Ex4.py- In this class we implement the GUI and algorithm of the game, in here we
 Pokemon.py- a class which allows to store data about pokemons , such as position and value.
 
 Agent.py- This class allows us to store data about the agent, such as pos caught pokemons, and speed.
+
+Explaining the algorithm:
+--
+Every time we get new pokemons , and at the start we turn their param's into a tuple which the first param in the tuple is the value of the pokemon, then I reverse sort the list of tuple , so the highest valued pokemon is in index 0 in the list , and then I pop it , it acts exactly like a priority queue , then we a assign an agent to that pokemon, getting the route for the agent we use the shortest path algo which we implemented in Asssignment 3, link above.
 
 About the assignment- Pokemon Game:
 --
