@@ -49,5 +49,8 @@ About the GUI:
 --
 we implemented the option to see the Algorithm in front of your eyes, when you run Ex4 the GUI will be opened.
 of course we implemented that so the current grade, moves and time left-to-end will be presented as well as a stop button which will stop the game gracefully.
-we also made 2 different pokemons - one who lying on downward edges and the other who lying on upward edges
+
+we also made 2 different pokemons - one who lying on downward edges and the other who lying on upward edges.
+
+we took the icons from: https://www.freepik.com
 
