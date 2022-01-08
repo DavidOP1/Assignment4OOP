@@ -14,7 +14,13 @@ Link: https://github.com/DavidOP1/Assignment3OOP
 
 Added classes in this assignment:
 --
-client.py- This class allows us to run commands on the java server to get info for the game , explanations of the commands are in the class in comments. We can receive data about the current pokemons , given agents , given graph and game info which shows the current 
+client.py- This class allows us to run commands on the java server to get info for the game , explanations of the commands are in the class in comments. We can receive data about the current pokemons , given agents , given graph and game info which shows the current grade , number of agents and pokemons, and time remaining for the game.
+
+Ex4.py- In this class we implement the GUI and algorithm of the game, in here we run the game when the server is activated.
+
+Pokemon.py- a class which allows to store data about pokemons , such as position and value.
+
+Agent.py- This class allows us to store data about the agent, such as pos caught pokemons, and speed.
 
 About the assignment- Pokemon Game:
 --
@@ -28,4 +34,9 @@ Running the game:
 --
 In the github repo you have a folder named: ServerAndData, create a folder in your computer name what you want, for example: ServerAndData, then install the java server and the data folder. After completing these steps , run cmd go to the folder which you created, in our example ServerAndData, and run the server by typing:
 
-java -jar Ex4_Server_v0.0.jar 0  , the '0'  at the end of the line is the number of the case, we have 16 cases(0-15). After typing 
+java -jar Ex4_Server_v0.0.jar 0  , the '0'  at the end of the line is the number of the case, we have 16 cases(0-15).
+After turning on the java game server with the choosen case, We open another cmd window and going to the python code directory , then typing , python Ex4.py , after pressing enter a GUI window should pop up with the graph and the first pokemons and agent's located in their positions, and then the game runs and catches the pokemons.
+
+UML:
+--
+
