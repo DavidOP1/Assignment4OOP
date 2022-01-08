@@ -5,6 +5,10 @@ Name: Liel Zilberman , ID: 212480974
 
 Name: Israel Yaacobovich ,  ID: 
 
+Must Read!!:
+--
+For you to able to run the game , open a new project in python , and copy the model, view, control and src folders with the folder them self into the project!.
+
 
 Disclaimer:
 --
@@ -35,7 +39,7 @@ Running the game:
 In the github repo you have a folder named: ServerAndData, create a folder in your computer name what you want, for example: ServerAndData, then install the java server and the data folder. After completing these steps , run cmd go to the folder which you created, in our example ServerAndData, and run the server by typing:
 
 java -jar Ex4_Server_v0.0.jar 0  , the '0'  at the end of the line is the number of the case, we have 16 cases(0-15).
-After turning on the java game server with the choosen case, We open another cmd window and going to the python code directory , then typing , python Ex4.py , after pressing enter a GUI window should pop up with the graph and the first pokemons and agent's located in their positions, and then the game runs and catches the pokemons.
+After turning on the java game server with the choosen case, just go to the Ex4.py file in the control folder and press run on main, after pressing enter a GUI window should pop up with the graph and the first pokemons and agent's located in their positions, and then the game runs and catches the pokemons.
 
 Running the game on case 11 example, youtube video:
 --
