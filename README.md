@@ -37,6 +37,11 @@ In the github repo you have a folder named: ServerAndData, create a folder in yo
 java -jar Ex4_Server_v0.0.jar 0  , the '0'  at the end of the line is the number of the case, we have 16 cases(0-15).
 After turning on the java game server with the choosen case, We open another cmd window and going to the python code directory , then typing , python Ex4.py , after pressing enter a GUI window should pop up with the graph and the first pokemons and agent's located in their positions, and then the game runs and catches the pokemons.
 
+Running the game on case 11 example, youtube video:
+--
+https://youtu.be/2PxvP6G69uw
+
 UML:
 --
+![WhatsApp Image 2022-01-08 at 21 50 51](https://user-images.githubusercontent.com/54214707/148657977-b19caf6c-2caf-41b1-8415-7e74db39e34a.jpeg)
 
