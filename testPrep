@@ -1,0 +1,79 @@
+import math
+import sys
+
+from Pokemon import Pokemon
+from src import DiGraph
+
+graph = DiGraph.DiGraph()
+pokList: Pokemon = []
+pokEdg = []
+
+def createGraph(g: dict):
+    for nd in g["Nodes"]:
+        (x, y, z) = nd["pos"].split(",")
+        graph.add_node(nd["id"], (float(x), float(y), float(z)))
+    for edg in g["Edges"]:
+        graph.add_edge(edg["src"], edg["dest"], edg["w"])
+    return graph
+
+def createPoki(poki):
+    mone = 0
+    for pokemon in poki["Pokemons"]:
+        for info in pokemon:
+            mone = 0
+            val = pokemon[info]["value"]
+            type = pokemon[info]["type"]
+            x, y, z = pokemon[info]["pos"].split(",")
+            pokList.append(Pokemon(val, float(x), float(y), type))
+
+def FindPoki():
+    temp, small, gap = (), sys.float_info.max, 0
+    src, dest = 0, 0
+    for p in pokList:
+        small, gap = sys.float_info.max, 0
+        temp = ()
+        for i in graph.graph:
+            for j in graph.getNode(i).Node:
+                src = graph.getNode(i).getLocation()
+                dest = graph.getNode(j).getLocation()
+
+                edgeSize = math.sqrt(math.pow(src.y - dest.y, 2) + math.pow(src.x - dest.x, 2))
+
+                # Dont forget to check type here.
+                # Keeping the most minimal gap.
+
+                size1 = math.sqrt(math.pow(p.getLocation().y - dest.y, 2) + math.pow(p.getLocation().x - dest.x, 2))
+                size2 = math.sqrt(math.pow(p.getLocation().y - src.y, 2) + math.pow(p.getLocation().x - src.x, 2))
+
+                gap = abs((size1 + size2) - edgeSize)
+
+                # If the edge goes to a dest with higher y value means the type is 1
+                if (j > i and p.getType() == 1):
+                    if gap < small:
+                        small = gap
+                        temp = (p.getValue(), j, i, p.getLocation().x, p.getLocation().y,
+                                p.getType())  # the value will be used for the algorithm. tuple struct (value,src,dest)
+                        src = j
+                        dest = i
+
+                elif (i > j and p.getType() == -1):
+                    if gap < small:
+                        small = gap
+                        temp = (p.getValue(), i, j, p.getLocation().x, p.getLocation().y,
+                                p.getType())  # the value will be used for the algorithm. tuple struct (value,src,dest)
+                        src = i
+                        dest = j
+
+        if not temp:
+            continue
+        else:
+            mone = 0
+            for ed in pokEdg:
+                if temp[0] == ed[0] and temp[1] == ed[1] and temp[2] == ed[2] and temp[3] == ed[3] and temp[4] == ed[
+                    4] and temp[5] == ed[5]:
+                    break
+                elif mone == len(pokEdg) - 1:
+                    pokEdg.append(temp)
+        if len(pokEdg) == 0:
+            pokEdg.append(temp)
+    return pokEdg
