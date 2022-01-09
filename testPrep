@@ -1,7 +1,7 @@
 import math
 import sys
 
-from src import pokemon
+from src.pokemon import Pokemon
 from src import DiGraph
 
 graph = DiGraph.DiGraph()
