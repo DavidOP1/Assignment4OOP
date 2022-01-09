@@ -65,5 +65,7 @@ we took the icons from: https://www.freepik.com
 About the test:
 --
 we made a test for our functions which we created at the Ex4 class.
+
 we tested the functions: 'createGraph', 'createPoki', 'FindPoki', 'creatAgent'.
+
 especially for the test we made the class 'testPrep' this class was made in order to be able to run the test without the Ex4_Server_v0.0.jar
